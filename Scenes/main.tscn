@@ -1,3 +1,23 @@
 [gd_scene format=2]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="plan" type="Node" parent="."]
+__meta__ = {
+"_editor_description_": "using blank nodes I can put in placeholders for design intentions"
+}
+
+[node name="gunshot behavior" type="Node" parent="plan"]
+__meta__ = {
+"_editor_description_": "when a weapon is fired, I want a screenshake that's alligned with the vector of the shot, so the recoil is felt along the vector rather that a random shake."
+}
+
+[node name="main character" type="Node" parent="plan"]
+__meta__ = {
+"_editor_description_": "I'm turn between art that's purely top-down and slightly more bird's eye, or isometric"
+}
+
+[node name="level" type="Node" parent="plan"]
+__meta__ = {
+"_editor_description_": "each level is an isolated chunk. maybe there will be some scrolling, but I could simplify things if I don't. proc gen could be a cool way to interconnect them if I want to go roguelike."
+}
