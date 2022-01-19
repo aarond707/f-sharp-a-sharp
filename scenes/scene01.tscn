@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/prototype sprites/Orb Mage/move.png" type="Texture" id=1]
+[ext_resource path="res://PlayerCharacter.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7, 12 )
+
+[node name="Scene" type="Node2D"]
+
+[node name="PlayerCharacter" type="KinematicBody2D" parent="."]
+script = ExtResource( 2 )
+max_speed = 500.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter"]
+position = Vector2( 0, 2 )
+shape = SubResource( 1 )
+
+[node name="Move" type="Sprite" parent="PlayerCharacter"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 14, 243, 15, 28 )
